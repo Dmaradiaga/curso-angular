@@ -10,15 +10,25 @@
 
 	<center>
 
-	    <div layout-gt-sm="row" ng-controller="LunchCheckController" class="miDiv">
-          <md-input-container class="md-block" flex-gt-sm>
-            <input ng-model="userData.someText" placeholder="Feel Free!!!!" width="300px">
-             <md-button class="md-raised md-primary" ng-click="clickme()">click me</md-button>
+	   <form class="myForm">
+	   		 <div layout-gt-sm="row" ng-controller="LunchCheckController" >
+          <md-input-container class="md-block" flex-gt-sm> <br>
+            <input ng-model="userData.someText" placeholder="Lunch Time!!" >
+            <h1 class="md-display-3 color-text-nice" ng-if="nice">
+             	{{ msg }}
+             </h1> <br>
+             <h1 class="md-display-3 color-text-error" ng-if="error">
+            		{{ msg }}
+           	</h1> <br>
+             <md-button class="md-raised md-primary" ng-click="clickme()">
+             	Check If Too Much</md-button>
              <br>
-             <h1 class="md-display-3">{{ userData.someText }}</h1>
+
+
           </md-input-container>
       
-        </div> 
+        </div>
+	   </form> 
 
 	</center>
 

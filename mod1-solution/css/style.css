@@ -1,5 +1,16 @@
 
-.miDiv {
+.myForm {
 
-	  margin-top: 100px
+	  margin-top: 100px;
+	  width:800px;
+}
+
+.color-text-nice {
+
+	 color: #2D77AB;
+}
+
+.color-text-error {
+
+	color: #E82C0C;
 }
