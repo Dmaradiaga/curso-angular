@@ -1,7 +1,7 @@
 
 (function(){
 
-		var miapp = angular.module("LunchCheck", []);
+		var miapp = angular.module("LunchCheck", ["ngMaterial"]);
 
 		miapp.controller("LunchCheckController", LunchControllerFunction);
 
