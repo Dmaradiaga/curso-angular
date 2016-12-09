@@ -9,6 +9,11 @@
 
 		function LunchControllerFunction($scope){
 
-				$scope.userData.text_value = "";
+				$scope.userData = {};
+
+				$scope.clickme = function()
+				{
+						alert("HELLO WORLD")
+				}
 		}
 })()
