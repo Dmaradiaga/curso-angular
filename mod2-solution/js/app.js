@@ -62,7 +62,7 @@
 									quantity: 2
 								},
 									{
-									name: "Chewimg Gum",
+									name: "Chewing Gum",
 									quantity: 8
 								},
 									{
