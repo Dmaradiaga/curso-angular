@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingItems">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping Lists</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="www/lib/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+
+	<center>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6" ng-controller="toBuyCtrl">
+					<h2 class="tobuy">To Buy</h2> <hr>
+					<span ng-if="empty()">
+						  <h2 style="color:#214BA4">
+						  	  Everything is bought!
+						  </h2>
+					</span>
+							<ul class="list-group" ng-if="!empty()">
+								 	<li class="list-group-item clearfix itemsBuy" ng-controller="toBuyCtrl" ng-repeat="item in items track by $index">
+
+										{{ item.name }} || {{ item.quantity }}
+										<span class="pull-right">
+											<button type="button" class="btn btn-primary" ng-click="buyItem($index)">
+														Bought
+											</button>
+										</span>
+
+								 	</li>
+							</ul>
+				</div>
+				<div class="col-md-6" ng-controller="alreadyBoughtCtrl">
+					<h2 class="alreadyBought">Already Bought</h2>
+
+					  <span ng-if="!empty()">
+							   <hr>
+					  	  <h2 style="color:red"> Nothing bought yet </h2>
+					  </span>
+							<ul class="list-group" ng-if="empty()">
+								 	<li class="list-group-item clearfix itemsBought"  ng-repeat="item in items track by $index">
+
+										{{ item.name }} || {{ item.quantity }}
+
+								 	</li>
+							</ul>
+				</div>
+			</div>
+	</div>
+
+	</center>
+
+
+	<script src="www/lib/jquery/dist/jquery.min.js"></script>
+	<script src="www/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="www/lib/angular/angular.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

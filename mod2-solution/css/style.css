@@ -1,0 +1,27 @@
+
+center {
+
+	  margin-top: 100px;
+		margin-left: 1px
+	  width:800px;
+}
+
+.tobuy {
+
+	 color: #13224B
+}
+
+.alreadyBought {
+
+	  color: #14A677
+}
+
+.itemsBuy
+{
+	  color: #6EA36D
+}
+
+.itemsBought {
+
+	   color: #F2B541
+}
