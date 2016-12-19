@@ -8,23 +8,23 @@
 
 </head>
 <body>
- 
+
 	<center>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-6" ng-controller="toBuyCtrl">
+				<div class="col-md-6" ng-controller="toBuyCtrl as buyCtrl">
 					<h2 class="tobuy">To Buy</h2> <hr>
-					<span ng-if="empty()">
+					<span ng-if="buyCtrl.empty()">
 						  <h2 style="color:#214BA4">
 						  	  Everything is bought!
 						  </h2>
 					</span>
-							<ul class="list-group" ng-if="!empty()">
-								 	<li class="list-group-item clearfix itemsBuy" ng-controller="toBuyCtrl" ng-repeat="item in items track by $index">
+							<ul class="list-group" ng-if="!buyCtrl.empty()">
+								 	<li class="list-group-item clearfix itemsBuy"  ng-repeat="item in buyCtrl.items">
 
 										{{ item.name }} || {{ item.quantity }}
 										<span class="pull-right">
-											<button type="button" class="btn btn-primary" ng-click="buyItem($index)">
+											<button type="button" class="btn btn-primary" ng-click="buyCtrl.buyItem($index)">
 														Bought
 											</button>
 										</span>
@@ -32,15 +32,15 @@
 								 	</li>
 							</ul>
 				</div>
-				<div class="col-md-6" ng-controller="alreadyBoughtCtrl">
+				<div class="col-md-6" ng-controller="alreadyBoughtCtrl as boughtCtrl">
 					<h2 class="alreadyBought">Already Bought</h2>
 
-					  <span ng-if="!empty()">
+					  <span ng-if="!boughtCtrl.empty()">
 							   <hr>
 					  	  <h2 style="color:red"> Nothing bought yet </h2>
 					  </span>
-							<ul class="list-group" ng-if="empty()">
-								 	<li class="list-group-item clearfix itemsBought"  ng-repeat="item in items track by $index">
+							<ul class="list-group" ng-if="boughtCtrl.empty()">
+								 	<li class="list-group-item clearfix itemsBought"  ng-repeat="item in boughtCtrl.items">
 
 										{{ item.name }} || {{ item.quantity }}
 

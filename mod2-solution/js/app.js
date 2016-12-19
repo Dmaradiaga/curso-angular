@@ -1,6 +1,7 @@
 
 (function(){
 
+  'use strict'
 		var miapp = angular.module("ShoppingItems", []);
 
 		miapp.controller("toBuyCtrl",toBuy);
@@ -8,36 +9,38 @@
 		miapp.service("ItemService", ItemService);
 
 
-		toBuy.$inject = ["$scope", "ItemService"]
-		alreadyBought.$inject = ["$scope", "ItemService"]
+		toBuy.$inject = ["ItemService"]
+		alreadyBought.$inject = ["ItemService"]
 
 
-		function toBuy($scope, ItemService)
+		function toBuy(ItemService)
 		{
-						$scope.items = ItemService.getItemsToBuy();
+					var _this = this;
 
-						$scope.empty = function()
+					 _this.items = ItemService.getItemsToBuy();
+
+						_this.empty = function()
 						{
-									if($scope.items.length==0)
+									if(_this.items.length==0)
 									{
 											 return true;
 									}
 						}
 
-						$scope.buyItem = function(index) {
+						_this.buyItem = function(index) {
 
 										ItemService.buyItem(index);
 						}
 
 		}
 
-		 function alreadyBought($scope, ItemService)
+		 function alreadyBought(ItemService)
 		 {
-
-							$scope.items = ItemService.getItemsAlreadyBought();
-							$scope.empty = function()
+					    var _this = this;
+							_this.items = ItemService.getItemsAlreadyBought();
+							_this.empty = function()
 							{
-											if($scope.items.length>0)
+											if(_this.items.length>0)
 											{
 														return true
 											}
