@@ -34,6 +34,7 @@
 		{
 				var _this = this;
 				_this.searchTerm = ""
+				_this.found = [];
 				
 				_this.searchItems = function()
 				{
