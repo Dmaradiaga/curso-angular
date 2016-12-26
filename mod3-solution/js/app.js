@@ -52,7 +52,6 @@
 											_this.searchTerm = "";
 											_this.status=false;
 											_this.found = items;
-											console.log(_this.found)
 										}
 								})
 								.catch(function(error){
@@ -64,13 +63,12 @@
 				_this.removeItem = function(index)
 				{
 						_this.found.splice(index,1);
-						console.log(_this.found)
 				}
 				
 		}
 
 
-		function MenuSearchService($http,API_BASE)
+		function MenuSearchService($http, API_BASE)
 		{
 				var _this = this;
 
