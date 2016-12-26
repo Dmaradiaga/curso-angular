@@ -1,7 +1,7 @@
 
-<ol>
-  <li ng-repeat="item in narrow.found">
+<ol class="list-group">
+  <li ng-repeat="item in narrow.found" class="list-group-item clearfix">
     {{ item.short_name }} , {{ item.description }}
-    <button ng-click="narrow.onRemove({index: $index});">Remove Item</button>
+    <button ng-click="narrow.onRemove({index: $index});">Don't want this one!</button>
   </li>
 </ol>
