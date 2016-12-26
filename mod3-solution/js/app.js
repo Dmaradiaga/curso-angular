@@ -52,6 +52,7 @@
 										{
 											_this.searchTerm = "";
 											_this.status=true;
+											_this.found = ""
 										}
 										else
 										{
@@ -77,7 +78,6 @@
 
 		function MenuSearchService($http,API_BASE)
 		{
-				
 				var _this = this;
 
 				_this.getMatchedMenuItems = function(searchTerm)
