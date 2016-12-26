@@ -41,6 +41,7 @@
 						{
 								_this.status = true;
 								_this.searchTerm = "";
+								_this.found = []
 								return false;
 						}
 						else
