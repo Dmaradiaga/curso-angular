@@ -55,6 +55,7 @@
 										if(items.length==0)
 										{
 											_this.status=true;
+											_this.found = [];
 										}
 										else
 										{
