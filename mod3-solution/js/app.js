@@ -52,7 +52,6 @@
 										{
 											_this.searchTerm = "";
 											_this.status=true;
-											_this.found = ""
 										}
 										else
 										{
