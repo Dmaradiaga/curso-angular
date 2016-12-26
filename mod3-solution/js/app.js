@@ -45,24 +45,25 @@
 						}
 						else
 						{
-							var response = MenuSearchService
-								.getMatchedMenuItems(_this.searchTerm);
+							var response = MenuSearchService.getMatchedMenuItems(_this.searchTerm);
 								
 								response.then(function(items){
 
+										_this.searchTerm = "";
+										
 										if(items.length==0)
 										{
-											_this.searchTerm = "";
 											_this.status=true;
 										}
 										else
 										{
-											_this.searchTerm = "";
+											
 											_this.status=false;
 											_this.found = items;
 										}
 								})
 								.catch(function(error){
+										_this.searchTerm = "";
 										console.log(error)
 								})
 						}
