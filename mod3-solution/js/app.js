@@ -18,7 +18,7 @@
 
 					templateUrl: 'foundItems.html',
 			        scope: {
-			          found: '<',
+			          found: '=',
 			          onRemove: '&'
 			        },
 			        controller: NarrowItDownController,
@@ -56,7 +56,7 @@
 										else
 										{
 											_this.searchTerm = "";
-											_this.status=false
+											_this.status=false;
 											_this.found = items;
 											console.log(_this.found)
 										}
