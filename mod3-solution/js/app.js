@@ -18,7 +18,7 @@
 
 					templateUrl: 'foundItems.html',
 			        scope: {
-			          found: '=',
+			          found: '<',
 			          onRemove: '&'
 			        },
 			        controller: NarrowItDownController,
@@ -70,6 +70,7 @@
 				_this.removeItem = function(index)
 				{
 						_this.found.splice(index,1);
+						console.log(_this.found)
 				}
 				
 		}
