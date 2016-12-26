@@ -37,7 +37,14 @@
 
 				_this.searchItems = function()
 				{
-						var response = MenuSearchService
+						if(!_this.searchTerm)
+						{
+								_this.status = true;
+								return false;
+						}
+						else
+						{
+							var response = MenuSearchService
 								.getMatchedMenuItems(_this.searchTerm);
 								
 								response.then(function(items){
@@ -57,6 +64,7 @@
 								.catch(function(error){
 										console.log(error)
 								})
+						}
 						
 				}
 
