@@ -40,6 +40,7 @@
 						if(!_this.searchTerm)
 						{
 								_this.status = true;
+								_this.searchTerm = "";
 								return false;
 						}
 						else
