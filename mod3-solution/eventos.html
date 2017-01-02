@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="EventosApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Trabajando con eventos</title>
+	<link rel="stylesheet" href="www/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container" ng-controller="controladorManejadorEventos as evento">
+  	  <h2>
+
+  	  </h2>
+  </div>
+
+  <div class="container">
+  	<div class="jumbotron" ng-controller="controladorGenerandoEvento as evento">
+  		  <button ng-click="evento.generarEvento()">
+  		  	Generar Evento
+  		  </button> <br>
+  		  <span>
+  		  	 {{ evento.total }}
+  		  </span>
+  	</div>
+  </div>
+	
+<script src="www/lib/angular/angular.min.js"></script>
+<script src="js/eventos.js"></script>	
+</body>
+</html>
