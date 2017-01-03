@@ -51,7 +51,6 @@
 
 			$urlRouterProvider.otherwise("/")
 
-			console.log("Routes Config running")
 	}
 
 }())
