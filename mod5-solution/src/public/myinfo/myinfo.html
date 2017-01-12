@@ -9,7 +9,13 @@
          Phone: <strong>{{ MyinfoCtrl.userInfo.phone }}</strong>
        </div> <br>
        <div class="container">
-          <menu-items items="MyinfoCtrl.userInfo.menu_items" url="MyinfoCtrl.url"></menu-items>
+         <p>
+            <strong> {{ MyinfoCtrl.userInfo.item.name }}</strong>
+         </p>
+         <p>   <strong> {{ MyinfoCtrl.userInfo.item.description }}</strong> </p>
+         <p>
+           <img ng-src="{{ MyinfoCtrl.ApiPath }}/images/{{ MyinfoCtrl.userInfo.short_name }}.jpg">
+         </p>
        </div>
      <p>
        <span style="color:red" ng-if="!MyinfoCtrl.msg">

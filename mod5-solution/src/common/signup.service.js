@@ -24,12 +24,12 @@
               {
                     var defer = $q.defer()
 
-                    $http.get(ApiPath+"/menu_items.json?category="+short_name)
-                    .then(function(datos){
-                         defer.resolve(datos.data)
+                    $http.get(ApiPath+"/menu_items/"+short_name+".json")
+                    .then(function(data){
+                         defer.resolve(data.data)
                     })
-                    .catch(function(datos){
-                        defer.reject(datos.data)
+                    .catch(function(data){
+                        defer.reject(data.data)
                     })
 
                     return defer.promise;

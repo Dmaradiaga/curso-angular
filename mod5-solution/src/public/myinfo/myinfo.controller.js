@@ -9,7 +9,7 @@
     function MyinfoController(userInfo, ApiPath)
     {
             var _this = this;
-            _this.url = ApiPath;
+            _this.ApiPath = ApiPath;
 
             if(userInfo.length!==0)
             {
