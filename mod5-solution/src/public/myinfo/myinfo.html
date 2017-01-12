@@ -1,0 +1,21 @@
+
+<div class="container">
+  <h2>User info</h2>
+   <div class="row">
+       <div class="container"  ng-if="MyinfoCtrl.msg">
+         Firts name: <strong>{{ MyinfoCtrl.userInfo.first_name }}</strong> <br>
+         Last name: <strong>{{ MyinfoCtrl.userInfo.last_name }}</strong> <br>
+         Email: <strong>{{ MyinfoCtrl.userInfo.email }}</strong> <br>
+         Phone: <strong>{{ MyinfoCtrl.userInfo.phone }}</strong>
+       </div> <br>
+       <div class="container">
+          <menu-items items="MyinfoCtrl.userInfo.menu_items" url="MyinfoCtrl.url"></menu-items>
+       </div>
+     <p>
+       <span style="color:red" ng-if="!MyinfoCtrl.msg">
+           <i>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></i>
+        </span>
+     </p>
+   </div>
+
+</div>

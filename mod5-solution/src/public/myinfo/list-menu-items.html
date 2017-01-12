@@ -1,0 +1,13 @@
+
+<br>
+<ul style="text-decoration:none">
+  <li ng-repeat="item in  $ctrl.items">
+        <p>
+          Title: <strong> {{ item.name }}</strong>
+        </p>
+        <p>  Description: <strong> {{ item.description }}</strong> </p>
+        <p>
+          <img ng-src="{{ $ctrl.url }}/images/{{ item.short_name }}.jpg">
+        </p>
+  </li>
+</ul>
